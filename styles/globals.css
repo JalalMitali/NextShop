@@ -1,26 +1,146 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@font-face {
+    font-family: 'ReadexPro';
+    font-style: normal;
+    font-weight: 900;
+    src: local('./ReadexPro.ttf'),
   }
-  body {
-    color: white;
-    background: black;
-  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'ReadexPro', sans-serif;
+      
+    }
+
+    ul {
+        @apply text-2xl
+    }
+    li {
+        @apply p-4
+    }
+    button {
+        @apply text-white border-2 bg-black border-black
+        hover:bg-transparent hover:text-black hover:bg-white rounded-md
+    }
+}
+
+@layer components {
+    .logo {
+        @apply
+        h-[8vh]
+        max-h-[8vh]
+        rounded-l-lg
+        shadow-md shadow-secondary
+        border-2 border-white
+    }
+
+    .logo-text {
+        @apply
+        px-5
+        text-center justify-center items-center
+        text-xl
+        bg-black text-white
+        border-2 border-white
+        rounded-r-full
+        shadow-md shadow-secondary
+        font-bold
+        transition
+    }
+
+   
+   .link-list {
+    @apply desktop:scale-150
+    }
+   
+    .list-item {
+        @apply
+        bg-black text-white
+        hover:bg-secondary hover:text-black
+        hover:cursor-pointer
+        shadow-sm shadow-secondary
+        border border-white
+    }
+
+    .list-item-active {
+        @apply
+        bg-white text-black
+        hover:bg-secondary hover:text-white
+        hover:cursor-pointer
+        shadow-sm shadow-secondary
+        border border-white
+    }
+
+    .button-start {
+        @apply
+        text-2xl font-bold
+        border-white
+        bg-green-500 hover:bg-secondary
+        text-white hover:text-black
+        px-10 py-3 rounded-full
+        desktop:py-5
+        shadow-sm
+        shadow-secondary
+        tracking-wider transition
+        desktop:scale-125
+    }
+
+    .card {
+        @apply bg-white text-gray-700
+        w-screen flex-none
+        shadow-lg rounded-md overflow-hidden
+        md:h-full md:w-full
+    }
+
+    .badge {
+        @apply
+        shadow-sm shadow-white
+        px-3 py-1 rounded-full text-xs bg-black text-white
+    }
+
+    .course-title {
+        @apply 
+        border-2 border-black
+        shadow-md shadow-black
+        bg-black rounded-lg text-white text-center justify-center
+        font-semibold text-2xl lg:text-4xl overflow-ellipsis overflow-hidden whitespace-nowrap
+    }
+    .button-watch {
+        @apply  
+        text-3xl
+        py-1
+        font-bold
+        bg-purple-500
+        shadow-md shadow-purple-500
+        flex-grow flex justify-center items-center 
+        transition rounded-md
+    }
+
+
+    .course-icon {
+        @apply
+        text-white
+        text-3xl font-bold
+        rounded-lg
+         w-full
+    }
+
+    .footer {
+        @apply
+        bg-primary text-white w-screen
+        justify-between items-center
+    }
+
+    .footer-item {
+        @apply
+        gap-3
+        bg-white text-3xl font-bold text-black flex flex-row rounded-lg p-5
+        hover:bg-secondary shadow-lg shadow-black
+    }
+    .practice-title {
+        @apply
+        w-screen justify-center items-center bg-black text-white text-9xl rounded-full px-72
+    }
 }
