@@ -1,4 +1,15 @@
 # NextShop : Advanced & Modern eCommerce Front End :
+#  Progress ( 0% )
+- [ ] Add Home Page  
+- [ ] Add Product Page  
+- [ ] Add Collection Page  
+- [ ] Add Shopping Cart
+- [ ] Add Payment Page
+- [ ] Add Checkout Page
+- [ ] Add Auth Pages
+- [ ] Add Profile Page
+- [ ] Add UpSell & PostSell
+- [ ] Deploy to Vercel  
 
 ## Getting Started
 
