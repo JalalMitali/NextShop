@@ -1,146 +1,82 @@
-@font-face {
-    font-family: 'ReadexPro';
-    font-style: normal;
-    font-weight: 900;
-    src: local('./ReadexPro.ttf'),
-  }
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     body {
-        font-family: 'ReadexPro', sans-serif;
-      
-    }
-
-    ul {
-        @apply text-2xl
-    }
-    li {
-        @apply p-4
-    }
-    button {
-        @apply text-white border-2 bg-black border-black
-        hover:bg-transparent hover:text-black hover:bg-white rounded-md
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
     }
 }
-
 @layer components {
-    .logo {
-        @apply
-        h-[8vh]
-        max-h-[8vh]
-        rounded-l-lg
-        shadow-md shadow-secondary
-        border-2 border-white
+  
+    /* container */
+    .nike-container {
+      @apply w-11/12 m-auto;
     }
-
-    .logo-text {
-        @apply
-        px-5
-        text-center justify-center items-center
-        text-xl
-        bg-black text-white
-        border-2 border-white
-        rounded-r-full
-        shadow-md shadow-secondary
-        font-bold
-        transition
+    
+    /* Scroll */
+    .scroll-hidden::-webkit-scrollbar{
+      display: none;
     }
-
-   
-   .link-list {
-    @apply desktop:scale-150
+    .scroll-style::-webkit-scrollbar{
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: rgb(66, 245, 141) rgb(66, 245, 141); 
     }
-   
-    .list-item {
-        @apply
-        bg-black text-white
-        hover:bg-secondary hover:text-black
-        hover:cursor-pointer
-        shadow-sm shadow-secondary
-        border border-white
+    .scroll-style::-webkit-scrollbar{
+      @apply w-2;
     }
-
-    .list-item-active {
-        @apply
-        bg-white text-black
-        hover:bg-secondary hover:text-white
-        hover:cursor-pointer
-        shadow-sm shadow-secondary
-        border border-white
+    .scroll-style::-webkit-scrollbar-track {
+      @apply bg-slate-700;
     }
-
-    .button-start {
-        @apply
-        text-2xl font-bold
-        border-white
-        bg-green-500 hover:bg-secondary
-        text-white hover:text-black
-        px-10 py-3 rounded-full
-        desktop:py-5
-        shadow-sm
-        shadow-secondary
-        tracking-wider transition
-        desktop:scale-125
+    .scroll-style::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-gradient-to-tr from-blue-500 to-green-500 via-teal-500;
     }
-
-    .card {
-        @apply bg-white text-gray-700
-        w-screen flex-none
-        shadow-lg rounded-md overflow-hidden
-        md:h-full md:w-full
+     
+    /* Theme-Colors */
+    .bg-theme {
+      background-image: linear-gradient( 0.2deg,  rgba(40, 173, 222,1) 4.8%, rgb(27, 76, 224) 85.5% );
     }
-
-    .badge {
-        @apply
-        shadow-sm shadow-white
-        px-3 py-1 rounded-full text-xs bg-black text-white
+    .bg-theme-cart {
+      @apply bg-gradient-to-b from-slate-900 to-gray-900 shadow-sm shadow-gray-900;
     }
-
-    .course-title {
-        @apply 
-        border-2 border-black
-        shadow-md shadow-black
-        bg-black rounded-lg text-white text-center justify-center
-        font-semibold text-2xl lg:text-4xl overflow-ellipsis overflow-hidden whitespace-nowrap
+  
+    /* Clip-path */
+    .clip-path {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+    }  
+    
+    /* Blur-Effect */
+    .blur-effect-theme {
+      @apply bg-white/50 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 opacity-100 z-[100] shadow-sm shadow-slate-100 transition-all duration-300;
     }
-    .button-watch {
-        @apply  
-        text-3xl
-        py-1
-        font-bold
-        bg-purple-500
-        shadow-md shadow-purple-500
-        flex-grow flex justify-center items-center 
-        transition rounded-md
+  
+    /* Icon Stles */
+    .icon-style {
+      @apply h-6 w-6 sm:h-5 sm:w-5 text-slate-100 cursor-pointer transition-all duration-100 active:scale-110 leading-tight;
     }
-
-
-    .course-icon {
-        @apply
-        text-white
-        text-3xl font-bold
-        rounded-lg
-         w-full
+  
+    /* text-gradient */
+    .text-gradient {
+      @apply text-transparent bg-clip-text bg-gradient-to-tr from-blue-500 to-sky-500;
     }
-
-    .footer {
-        @apply
-        bg-primary text-white w-screen
-        justify-between items-center
+  
+    /* border */ 
+    .rounded-theme {
+      border-radius: 5% 100% 10% 5%;
     }
-
-    .footer-item {
-        @apply
-        gap-3
-        bg-white text-3xl font-bold text-black flex flex-row rounded-lg p-5
-        hover:bg-secondary shadow-lg shadow-black
+  
+    /* button */
+    .button-theme {
+      @apply px-7 py-1 rounded active:scale-90 transition-all duration-100 ease-in-out shadow-md sm:text-sm;
     }
-    .practice-title {
-        @apply
-        w-screen justify-center items-center bg-black text-white text-9xl rounded-full px-72
+  
+    /* tranistions-theme */
+    .transitions-theme {
+      @apply transition-all duration-700 ease-in-out cursor-pointer;
     }
-}
+  
+  }

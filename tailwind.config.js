@@ -6,22 +6,12 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-      'desktop': '1980px',
-    },
+        'xl': {'max': '1200px'},
+        'lg': {'max': '991px'},
+        'md': {'max': '767px'},
+        'sm': {'max': '550px'},
+        'xs': {'max': '375px'},
+      },
     extend: {
       colors: {
         primary: '#FC7651',
